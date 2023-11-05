@@ -1,8 +1,6 @@
 name: Pylint
 
-on: 
-  pull_request:
-    types: opened
+on: pull_request_target
 
 jobs:
   build:
