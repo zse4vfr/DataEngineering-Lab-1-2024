@@ -23,9 +23,9 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         {
-          echo 'MESSAGE<<EOF'
+          echo 'MESSAGE<<PYLINT_OUTPUT'
           pylint --exit-zero $(git ls-files '*.py')
-          echo EOF
+          echo 'PYLINT_OUTPUT'
         } >> "$GITHUB_ENV"
     - name: Post result to PR
       uses: mshick/add-pr-comment@v1
